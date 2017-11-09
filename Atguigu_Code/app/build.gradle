@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "25"
+
+    defaultConfig {
+        applicationId "com.atguigu.android"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    //    compile files('libs/okhttp-3.4.1.jar')
+    //    compile files('libs/okio-1.9.0.jar')
+    compile project(':okhttputils')
+    compile files('libs/gson-2.7.jar')
+    compile files('libs/fastjson-1.1.54.android.jar')
+    //    compile 'org.xutils:xutils:3.3.36'
+    compile project(':xutils')
+    compile files('libs/afinal_0.5.1_bin.jar')
+    compile files('libs/volley.jar')
+    compile files('libs/eventbus-3.0.0.jar')
+    compile files('libs/eventbus-3.0.0-sources.jar')
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'jp.wasabeef:picasso-transformations:2.1.0'
+    // If you want to use the GPU Filters
+    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+}
+
+repositories {
+    jcenter()
+}

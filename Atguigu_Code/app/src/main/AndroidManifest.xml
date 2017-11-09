@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.atguigu.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".AtguiguApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/atguigu_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LauncherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".okhttp.activity.OKHttpActivity" />
+        <activity android:name=".okhttp.activity.OKHttpListActivity" />
+        <activity android:name=".json.activity.NativeJsonPraseActivity" />
+        <activity android:name=".json.activity.GsonActivity" />
+        <activity android:name=".json.activity.FastJsonActivity" />
+        <activity android:name=".xutils3.XUtils3MainActivity" />
+        <activity android:name=".xutils3.annotation.FragmentXUtils3Activity" />
+        <activity android:name=".xutils3.net.XUtils3NetActivity" />
+        <activity android:name=".afinal.AfinalActivity" />
+        <activity android:name=".volley.VolleyActivity" />
+        <activity android:name=".eventbus.EventBusActivity" />
+        <activity android:name=".eventbus.EventBusSendActivity" />
+        <activity android:name=".butterknife.ButterknifeActivity" />
+        <activity android:name=".imageloader.acitvity.ImageLoaderActivity" />
+        <activity android:name=".imageloader.acitvity.ImageloaderListviewActivity" />
+        <activity android:name=".imageloader.acitvity.ImageloaderGridviewActivity" />
+        <activity android:name=".imageloader.acitvity.ImageloaderViewpagerActivity" />
+        <activity android:name=".picasso.activity.PicassoActivity" />
+        <activity android:name=".picasso.activity.PicassoListviewActivity" />
+        <activity android:name=".picasso.activity.PicassoTransfromationsActivity" />
+        <activity android:name=".recyclervview.RecyclerViewActivity" />
+        <activity android:name=".glide.activity.GlideActivity" />
+        <activity android:name=".glide.activity.GlideBaseActivity" />
+        <activity android:name=".glide.activity.GlideRecyclerviewActivity" />
+        <activity android:name=".glide.activity.GlideTranformationsActivity"></activity>
+    </application>
+
+</manifest>
